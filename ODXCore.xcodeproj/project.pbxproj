@@ -31,6 +31,20 @@
 		FA74502A1C06056B008A9024 /* ODWeakify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61D1C05E8F700394311 /* ODWeakify.h */; };
 		FA74502B1C06056B008A9024 /* ODXCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61E1C05E8F700394311 /* ODXCore.h */; };
 		FA74502C1C060620008A9024 /* libODXCore-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA16A5F91C0506DD00394311 /* libODXCore-OSX.a */; };
+		FA74509E1C062D11008A9024 /* ODCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74509D1C062D11008A9024 /* ODCompatibility.m */; };
+		FA7450A21C0630C8008A9024 /* ODCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA74509C1C062D11008A9024 /* ODCompatibility.h */; };
+		FA7450A31C0630D2008A9024 /* ODCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA74509C1C062D11008A9024 /* ODCompatibility.h */; };
+		FA74513A1C064A2A008A9024 /* NSObject+ODValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6141C05E8F700394311 /* NSObject+ODValidation.m */; };
+		FA74513B1C064A2A008A9024 /* ODPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A61B1C05E8F700394311 /* ODPath.m */; };
+		FA74513F1C064A2A008A9024 /* ODCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA74509C1C062D11008A9024 /* ODCompatibility.h */; };
+		FA7451401C064A2A008A9024 /* NSObject+ODValidation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6131C05E8F700394311 /* NSObject+ODValidation.h */; };
+		FA7451411C064A2A008A9024 /* ODAssociatedProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6151C05E8F700394311 /* ODAssociatedProperty.h */; };
+		FA7451421C064A2A008A9024 /* ODDispatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6181C05E8F700394311 /* ODDispatch.h */; };
+		FA7451431C064A2A008A9024 /* ODLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6191C05E8F700394311 /* ODLog.h */; };
+		FA7451441C064A2A008A9024 /* ODPath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61A1C05E8F700394311 /* ODPath.h */; };
+		FA7451451C064A2A008A9024 /* ODStringify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61C1C05E8F700394311 /* ODStringify.h */; };
+		FA7451461C064A2A008A9024 /* ODWeakify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61D1C05E8F700394311 /* ODWeakify.h */; };
+		FA7451471C064A2A008A9024 /* ODXCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61E1C05E8F700394311 /* ODXCore.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +68,10 @@
 		FA2C30201C007E1300BD3CE5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = include/ODX.Core;
 			dstSubfolderSpec = 16;
 			files = (
+				FA7450A21C0630C8008A9024 /* ODCompatibility.h in CopyFiles */,
 				FA7450191C060529008A9024 /* NSObject+ODValidation.h in CopyFiles */,
 				FA74501A1C060529008A9024 /* ODAssociatedProperty.h in CopyFiles */,
 				FA74501C1C060529008A9024 /* ODDispatch.h in CopyFiles */,
@@ -71,9 +86,10 @@
 		FA7450221C060545008A9024 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = include/ODX.Core;
 			dstSubfolderSpec = 16;
 			files = (
+				FA7450A31C0630D2008A9024 /* ODCompatibility.h in CopyFiles */,
 				FA7450231C06056B008A9024 /* NSObject+ODValidation.h in CopyFiles */,
 				FA7450241C06056B008A9024 /* ODAssociatedProperty.h in CopyFiles */,
 				FA7450261C06056B008A9024 /* ODDispatch.h in CopyFiles */,
@@ -82,6 +98,24 @@
 				FA7450291C06056B008A9024 /* ODStringify.h in CopyFiles */,
 				FA74502A1C06056B008A9024 /* ODWeakify.h in CopyFiles */,
 				FA74502B1C06056B008A9024 /* ODXCore.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA74513E1C064A2A008A9024 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/ODX.Core;
+			dstSubfolderSpec = 16;
+			files = (
+				FA74513F1C064A2A008A9024 /* ODCompatibility.h in CopyFiles */,
+				FA7451401C064A2A008A9024 /* NSObject+ODValidation.h in CopyFiles */,
+				FA7451411C064A2A008A9024 /* ODAssociatedProperty.h in CopyFiles */,
+				FA7451421C064A2A008A9024 /* ODDispatch.h in CopyFiles */,
+				FA7451431C064A2A008A9024 /* ODLog.h in CopyFiles */,
+				FA7451441C064A2A008A9024 /* ODPath.h in CopyFiles */,
+				FA7451451C064A2A008A9024 /* ODStringify.h in CopyFiles */,
+				FA7451461C064A2A008A9024 /* ODWeakify.h in CopyFiles */,
+				FA7451471C064A2A008A9024 /* ODXCore.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +141,9 @@
 		FA2C30411C0080F000BD3CE5 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = SOURCE_ROOT; };
 		FA2C30421C0080F000BD3CE5 /* ODX.Core.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ODX.Core.podspec; sourceTree = SOURCE_ROOT; };
 		FA2C30431C0080F000BD3CE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		FA74509C1C062D11008A9024 /* ODCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODCompatibility.h; sourceTree = "<group>"; };
+		FA74509D1C062D11008A9024 /* ODCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODCompatibility.m; sourceTree = "<group>"; };
+		FA74514B1C064A2A008A9024 /* libODXCore-WatchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libODXCore-WatchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +177,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA74513C1C064A2A008A9024 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -162,6 +206,7 @@
 				FA2C30321C007E3300BD3CE5 /* OXCore_Tests.xctest */,
 				FA16A5F91C0506DD00394311 /* libODXCore-OSX.a */,
 				FA16A6421C05E96400394311 /* OXCore-OSX_Tests.xctest */,
+				FA74514B1C064A2A008A9024 /* libODXCore-WatchOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +233,8 @@
 				FA16A61C1C05E8F700394311 /* ODStringify.h */,
 				FA16A61D1C05E8F700394311 /* ODWeakify.h */,
 				FA16A61E1C05E8F700394311 /* ODXCore.h */,
+				FA74509C1C062D11008A9024 /* ODCompatibility.h */,
+				FA74509D1C062D11008A9024 /* ODCompatibility.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -196,6 +243,13 @@
 
 /* Begin PBXHeadersBuildPhase section */
 		FA16A5F71C0506DD00394311 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA74513D1C064A2A008A9024 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,6 +330,24 @@
 			productReference = FA2C30321C007E3300BD3CE5 /* OXCore_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FA7451381C064A2A008A9024 /* ODXCore-WatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7451481C064A2A008A9024 /* Build configuration list for PBXNativeTarget "ODXCore-WatchOS" */;
+			buildPhases = (
+				FA7451391C064A2A008A9024 /* Sources */,
+				FA74513C1C064A2A008A9024 /* Frameworks */,
+				FA74513D1C064A2A008A9024 /* Headers */,
+				FA74513E1C064A2A008A9024 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ODXCore-WatchOS";
+			productName = "ODXCore-OSX";
+			productReference = FA74514B1C064A2A008A9024 /* libODXCore-WatchOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -310,6 +382,7 @@
 			targets = (
 				FA2C30211C007E1300BD3CE5 /* ODXCore */,
 				FA16A5F81C0506DD00394311 /* ODXCore-OSX */,
+				FA7451381C064A2A008A9024 /* ODXCore-WatchOS */,
 				FA2C30311C007E3300BD3CE5 /* OXCore_Tests */,
 				FA16A6311C05E96400394311 /* OXCore-OSX_Tests */,
 			);
@@ -355,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA74509E1C062D11008A9024 /* ODCompatibility.m in Sources */,
 				FA16A6201C05E8F700394311 /* NSObject+ODValidation.m in Sources */,
 				FA16A62B1C05E8F700394311 /* ODPath.m in Sources */,
 			);
@@ -365,6 +439,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2C30351C007E3300BD3CE5 /* ODXCore_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7451391C064A2A008A9024 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA74513A1C064A2A008A9024 /* NSObject+ODValidation.m in Sources */,
+				FA74513B1C064A2A008A9024 /* ODPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +551,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -505,7 +589,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -556,6 +641,28 @@
 			};
 			name = Release;
 		};
+		FA7451491C064A2A008A9024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+			};
+			name = Debug;
+		};
+		FA74514A1C064A2A008A9024 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -600,6 +707,15 @@
 			buildConfigurations = (
 				FA2C303B1C007E3300BD3CE5 /* Debug */,
 				FA2C303C1C007E3300BD3CE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA7451481C064A2A008A9024 /* Build configuration list for PBXNativeTarget "ODXCore-WatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7451491C064A2A008A9024 /* Debug */,
+				FA74514A1C064A2A008A9024 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

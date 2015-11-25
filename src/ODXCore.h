@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import "ODAssociatedProperty.h"
-//#import "ODCompatibility.h"
+#import "ODCompatibility.h"
 #import "ODDispatch.h"
 #import "ODLog.h"
 #import "ODStringify.h"
