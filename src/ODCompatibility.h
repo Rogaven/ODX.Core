@@ -22,38 +22,3 @@
 
 #import <Foundation/Foundation.h>
 #import "ODStringify.h"
-
-// OS Versions
-#define OD_IOS_TEST(sign, x) (NSFoundationVersionNumber sign NSFoundationVersionNumber_iOS_##x)
-
-#define OD_IOS9_AVAILABLE (OD_IOS_TEST(>, 8_3))
-#define OD_IOS8_AVAILABLE (OD_IOS_TEST(>=, 8_0))
-#define OD_IOS7_AVAILABLE (OD_IOS_TEST(>=, 7_0))
-#define OD_IOS6_AVAILABLE (OD_IOS_TEST(>=, 6_0))
-#define OD_IOS5_AVAILABLE (OD_IOS_TEST(>=, 5_0))
-#define OD_IOS4_AVAILABLE (OD_IOS_TEST(>=, 4_0))
-
-#define OD_IOS9 (OD_IOS_TEST(>, 8_3))
-#define OD_IOS8 (OD_IOS_TEST(>=, 8_0) && OD_IOS_TEST(<=, 8_3))
-#define OD_IOS7 (OD_IOS_TEST(>=, 7_0) && OD_IOS_TEST(<, 8_0))
-#define OD_IOS6 (OD_IOS_TEST(>=, 6_0) && OD_IOS_TEST(<, 7_0))
-#define OD_IOS5 (OD_IOS_TEST(>=, 5_0) && OD_IOS_TEST(<, 6_0))
-#define OD_IOS4 (OD_IOS_TEST(>=, 4_0) && OD_IOS_TEST(<, 5_0))
-
-//@interface ODCompatibility : NSObject
-//+ (NSString *)appVersion;
-//+ (NSString *)buildVersion;
-//
-//+ (BOOL)isSimulator;
-//
-//+ (BOOL)isIPad;
-//+ (BOOL)isIPhone2x;
-//+ (BOOL)isIPhone5x;
-//+ (BOOL)isIPhone6x;
-//+ (BOOL)isIPhone6Px;
-//+ (BOOL)isIOS6x;
-//+ (BOOL)isIOS7x;
-//+ (BOOL)isIOS8x;
-//
-//+ (BOOL)isRetina;
-//@end
