@@ -9,7 +9,7 @@ ODX.Core is a set of utility classes and methods for iOS & OSX apps.
 ## Usage
 
 ```objective-c
-#import <ODX.Core.h>
+#import <ODXCore.h>
 ```
 
 ## Installation

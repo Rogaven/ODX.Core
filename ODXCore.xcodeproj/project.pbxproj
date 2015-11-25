@@ -9,36 +9,48 @@
 /* Begin PBXBuildFile section */
 		FA16A6201C05E8F700394311 /* NSObject+ODValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6141C05E8F700394311 /* NSObject+ODValidation.m */; };
 		FA16A6211C05E8F700394311 /* NSObject+ODValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6141C05E8F700394311 /* NSObject+ODValidation.m */; };
-		FA16A6221C05E8F700394311 /* NSObject+ODValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6141C05E8F700394311 /* NSObject+ODValidation.m */; };
 		FA16A6251C05E8F700394311 /* ODCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6171C05E8F700394311 /* ODCompatibility.m */; };
 		FA16A6261C05E8F700394311 /* ODCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6171C05E8F700394311 /* ODCompatibility.m */; };
-		FA16A6271C05E8F700394311 /* ODCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6171C05E8F700394311 /* ODCompatibility.m */; };
 		FA16A62B1C05E8F700394311 /* ODPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A61B1C05E8F700394311 /* ODPath.m */; };
 		FA16A62C1C05E8F700394311 /* ODPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A61B1C05E8F700394311 /* ODPath.m */; };
-		FA16A62D1C05E8F700394311 /* ODPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A61B1C05E8F700394311 /* ODPath.m */; };
-		FA16A6361C05E96400394311 /* ODCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6171C05E8F700394311 /* ODCompatibility.m */; };
 		FA16A6371C05E96400394311 /* ODXCore_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30341C007E3300BD3CE5 /* ODXCore_Tests.m */; };
-		FA16A6381C05E96400394311 /* NSObject+ODValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6141C05E8F700394311 /* NSObject+ODValidation.m */; };
-		FA16A6391C05E96400394311 /* ODPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A61B1C05E8F700394311 /* ODPath.m */; };
-		FA16A63B1C05E96400394311 /* libODXCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2C30221C007E1300BD3CE5 /* libODXCore.a */; };
 		FA2C30351C007E3300BD3CE5 /* ODXCore_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C30341C007E3300BD3CE5 /* ODXCore_Tests.m */; };
 		FA2C30371C007E3300BD3CE5 /* libODXCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2C30221C007E1300BD3CE5 /* libODXCore.a */; };
+		FA7450191C060529008A9024 /* NSObject+ODValidation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6131C05E8F700394311 /* NSObject+ODValidation.h */; };
+		FA74501A1C060529008A9024 /* ODAssociatedProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6151C05E8F700394311 /* ODAssociatedProperty.h */; };
+		FA74501B1C060529008A9024 /* ODCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6161C05E8F700394311 /* ODCompatibility.h */; };
+		FA74501C1C060529008A9024 /* ODDispatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6181C05E8F700394311 /* ODDispatch.h */; };
+		FA74501D1C060529008A9024 /* ODLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6191C05E8F700394311 /* ODLog.h */; };
+		FA74501E1C060529008A9024 /* ODPath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61A1C05E8F700394311 /* ODPath.h */; };
+		FA74501F1C060529008A9024 /* ODStringify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61C1C05E8F700394311 /* ODStringify.h */; };
+		FA7450201C060529008A9024 /* ODWeakify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61D1C05E8F700394311 /* ODWeakify.h */; };
+		FA7450211C060529008A9024 /* ODXCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61E1C05E8F700394311 /* ODXCore.h */; };
+		FA7450231C06056B008A9024 /* NSObject+ODValidation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6131C05E8F700394311 /* NSObject+ODValidation.h */; };
+		FA7450241C06056B008A9024 /* ODAssociatedProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6151C05E8F700394311 /* ODAssociatedProperty.h */; };
+		FA7450251C06056B008A9024 /* ODCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6161C05E8F700394311 /* ODCompatibility.h */; };
+		FA7450261C06056B008A9024 /* ODDispatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6181C05E8F700394311 /* ODDispatch.h */; };
+		FA7450271C06056B008A9024 /* ODLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6191C05E8F700394311 /* ODLog.h */; };
+		FA7450281C06056B008A9024 /* ODPath.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61A1C05E8F700394311 /* ODPath.h */; };
+		FA7450291C06056B008A9024 /* ODStringify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61C1C05E8F700394311 /* ODStringify.h */; };
+		FA74502A1C06056B008A9024 /* ODWeakify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61D1C05E8F700394311 /* ODWeakify.h */; };
+		FA74502B1C06056B008A9024 /* ODXCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61E1C05E8F700394311 /* ODXCore.h */; };
+		FA74502C1C060620008A9024 /* libODXCore-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA16A5F91C0506DD00394311 /* libODXCore-OSX.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA16A6331C05E96400394311 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA2C301A1C007E1300BD3CE5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA2C30211C007E1300BD3CE5;
-			remoteInfo = ODXCore;
-		};
 		FA2C30381C007E3300BD3CE5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA2C301A1C007E1300BD3CE5 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FA2C30211C007E1300BD3CE5;
 			remoteInfo = ODXCore;
+		};
+		FA7450171C060504008A9024 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA2C301A1C007E1300BD3CE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA16A5F81C0506DD00394311;
+			remoteInfo = "ODXCore-OSX";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -49,6 +61,33 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				FA7450191C060529008A9024 /* NSObject+ODValidation.h in CopyFiles */,
+				FA74501A1C060529008A9024 /* ODAssociatedProperty.h in CopyFiles */,
+				FA74501B1C060529008A9024 /* ODCompatibility.h in CopyFiles */,
+				FA74501C1C060529008A9024 /* ODDispatch.h in CopyFiles */,
+				FA74501D1C060529008A9024 /* ODLog.h in CopyFiles */,
+				FA74501E1C060529008A9024 /* ODPath.h in CopyFiles */,
+				FA74501F1C060529008A9024 /* ODStringify.h in CopyFiles */,
+				FA7450201C060529008A9024 /* ODWeakify.h in CopyFiles */,
+				FA7450211C060529008A9024 /* ODXCore.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7450221C060545008A9024 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				FA7450231C06056B008A9024 /* NSObject+ODValidation.h in CopyFiles */,
+				FA7450241C06056B008A9024 /* ODAssociatedProperty.h in CopyFiles */,
+				FA7450251C06056B008A9024 /* ODCompatibility.h in CopyFiles */,
+				FA7450261C06056B008A9024 /* ODDispatch.h in CopyFiles */,
+				FA7450271C06056B008A9024 /* ODLog.h in CopyFiles */,
+				FA7450281C06056B008A9024 /* ODPath.h in CopyFiles */,
+				FA7450291C06056B008A9024 /* ODStringify.h in CopyFiles */,
+				FA74502A1C06056B008A9024 /* ODWeakify.h in CopyFiles */,
+				FA74502B1C06056B008A9024 /* ODXCore.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA16A63B1C05E96400394311 /* libODXCore.a in Frameworks */,
+				FA74502C1C060620008A9024 /* libODXCore-OSX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +222,7 @@
 				FA16A5F51C0506DD00394311 /* Sources */,
 				FA16A5F61C0506DD00394311 /* Frameworks */,
 				FA16A5F71C0506DD00394311 /* Headers */,
+				FA7450221C060545008A9024 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -204,7 +244,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FA16A6321C05E96400394311 /* PBXTargetDependency */,
+				FA7450181C060504008A9024 /* PBXTargetDependency */,
 			);
 			name = "OXCore-OSX_Tests";
 			productName = Tests;
@@ -318,10 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA16A6361C05E96400394311 /* ODCompatibility.m in Sources */,
 				FA16A6371C05E96400394311 /* ODXCore_Tests.m in Sources */,
-				FA16A6381C05E96400394311 /* NSObject+ODValidation.m in Sources */,
-				FA16A6391C05E96400394311 /* ODPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,25 +376,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA16A6271C05E8F700394311 /* ODCompatibility.m in Sources */,
 				FA2C30351C007E3300BD3CE5 /* ODXCore_Tests.m in Sources */,
-				FA16A6221C05E8F700394311 /* NSObject+ODValidation.m in Sources */,
-				FA16A62D1C05E8F700394311 /* ODPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FA16A6321C05E96400394311 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA2C30211C007E1300BD3CE5 /* ODXCore */;
-			targetProxy = FA16A6331C05E96400394311 /* PBXContainerItemProxy */;
-		};
 		FA2C30391C007E3300BD3CE5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA2C30211C007E1300BD3CE5 /* ODXCore */;
 			targetProxy = FA2C30381C007E3300BD3CE5 /* PBXContainerItemProxy */;
+		};
+		FA7450181C060504008A9024 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA16A5F81C0506DD00394311 /* ODXCore-OSX */;
+			targetProxy = FA7450171C060504008A9024 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -368,6 +402,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -379,6 +414,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				EXECUTABLE_PREFIX = lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -389,6 +425,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nazaroff.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -400,6 +437,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nazaroff.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -513,6 +551,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nazaroff.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -523,6 +562,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nazaroff.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
