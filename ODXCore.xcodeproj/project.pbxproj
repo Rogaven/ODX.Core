@@ -31,12 +31,8 @@
 		FA74502A1C06056B008A9024 /* ODWeakify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61D1C05E8F700394311 /* ODWeakify.h */; };
 		FA74502B1C06056B008A9024 /* ODXCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61E1C05E8F700394311 /* ODXCore.h */; };
 		FA74502C1C060620008A9024 /* libODXCore-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA16A5F91C0506DD00394311 /* libODXCore-OSX.a */; };
-		FA74509E1C062D11008A9024 /* ODCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74509D1C062D11008A9024 /* ODCompatibility.m */; };
-		FA7450A21C0630C8008A9024 /* ODCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA74509C1C062D11008A9024 /* ODCompatibility.h */; };
-		FA7450A31C0630D2008A9024 /* ODCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA74509C1C062D11008A9024 /* ODCompatibility.h */; };
 		FA74513A1C064A2A008A9024 /* NSObject+ODValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A6141C05E8F700394311 /* NSObject+ODValidation.m */; };
 		FA74513B1C064A2A008A9024 /* ODPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FA16A61B1C05E8F700394311 /* ODPath.m */; };
-		FA74513F1C064A2A008A9024 /* ODCompatibility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA74509C1C062D11008A9024 /* ODCompatibility.h */; };
 		FA7451401C064A2A008A9024 /* NSObject+ODValidation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6131C05E8F700394311 /* NSObject+ODValidation.h */; };
 		FA7451411C064A2A008A9024 /* ODAssociatedProperty.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6151C05E8F700394311 /* ODAssociatedProperty.h */; };
 		FA7451421C064A2A008A9024 /* ODDispatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A6181C05E8F700394311 /* ODDispatch.h */; };
@@ -45,6 +41,7 @@
 		FA7451451C064A2A008A9024 /* ODStringify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61C1C05E8F700394311 /* ODStringify.h */; };
 		FA7451461C064A2A008A9024 /* ODWeakify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61D1C05E8F700394311 /* ODWeakify.h */; };
 		FA7451471C064A2A008A9024 /* ODXCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA16A61E1C05E8F700394311 /* ODXCore.h */; };
+		FAF3CD9E1C08F858007F693F /* NSObject+ODTransformation.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3CD9D1C08F858007F693F /* NSObject+ODTransformation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +68,6 @@
 			dstPath = include/ODX.Core;
 			dstSubfolderSpec = 16;
 			files = (
-				FA7450A21C0630C8008A9024 /* ODCompatibility.h in CopyFiles */,
 				FA7450191C060529008A9024 /* NSObject+ODValidation.h in CopyFiles */,
 				FA74501A1C060529008A9024 /* ODAssociatedProperty.h in CopyFiles */,
 				FA74501C1C060529008A9024 /* ODDispatch.h in CopyFiles */,
@@ -89,7 +85,6 @@
 			dstPath = include/ODX.Core;
 			dstSubfolderSpec = 16;
 			files = (
-				FA7450A31C0630D2008A9024 /* ODCompatibility.h in CopyFiles */,
 				FA7450231C06056B008A9024 /* NSObject+ODValidation.h in CopyFiles */,
 				FA7450241C06056B008A9024 /* ODAssociatedProperty.h in CopyFiles */,
 				FA7450261C06056B008A9024 /* ODDispatch.h in CopyFiles */,
@@ -107,7 +102,6 @@
 			dstPath = include/ODX.Core;
 			dstSubfolderSpec = 16;
 			files = (
-				FA74513F1C064A2A008A9024 /* ODCompatibility.h in CopyFiles */,
 				FA7451401C064A2A008A9024 /* NSObject+ODValidation.h in CopyFiles */,
 				FA7451411C064A2A008A9024 /* ODAssociatedProperty.h in CopyFiles */,
 				FA7451421C064A2A008A9024 /* ODDispatch.h in CopyFiles */,
@@ -141,9 +135,9 @@
 		FA2C30411C0080F000BD3CE5 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = SOURCE_ROOT; };
 		FA2C30421C0080F000BD3CE5 /* ODX.Core.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ODX.Core.podspec; sourceTree = SOURCE_ROOT; };
 		FA2C30431C0080F000BD3CE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		FA74509C1C062D11008A9024 /* ODCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODCompatibility.h; sourceTree = "<group>"; };
-		FA74509D1C062D11008A9024 /* ODCompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODCompatibility.m; sourceTree = "<group>"; };
 		FA74514B1C064A2A008A9024 /* libODXCore-WatchOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libODXCore-WatchOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF3CD9C1C08F858007F693F /* NSObject+ODTransformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ODTransformation.h"; sourceTree = "<group>"; };
+		FAF3CD9D1C08F858007F693F /* NSObject+ODTransformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ODTransformation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +217,8 @@
 		FA2C303D1C0080DA00BD3CE5 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				FAF3CD9C1C08F858007F693F /* NSObject+ODTransformation.h */,
+				FAF3CD9D1C08F858007F693F /* NSObject+ODTransformation.m */,
 				FA16A6131C05E8F700394311 /* NSObject+ODValidation.h */,
 				FA16A6141C05E8F700394311 /* NSObject+ODValidation.m */,
 				FA16A6151C05E8F700394311 /* ODAssociatedProperty.h */,
@@ -233,8 +229,6 @@
 				FA16A61C1C05E8F700394311 /* ODStringify.h */,
 				FA16A61D1C05E8F700394311 /* ODWeakify.h */,
 				FA16A61E1C05E8F700394311 /* ODXCore.h */,
-				FA74509C1C062D11008A9024 /* ODCompatibility.h */,
-				FA74509D1C062D11008A9024 /* ODCompatibility.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -428,9 +422,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA74509E1C062D11008A9024 /* ODCompatibility.m in Sources */,
 				FA16A6201C05E8F700394311 /* NSObject+ODValidation.m in Sources */,
 				FA16A62B1C05E8F700394311 /* ODPath.m in Sources */,
+				FAF3CD9E1C08F858007F693F /* NSObject+ODTransformation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
