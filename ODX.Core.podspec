@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ODX.Core"
-  s.version      = "1.5.0"
+  s.version      = "1.5.1"
   s.summary      = "Set of utility classes and methods for iOS & OSX apps."
   s.homepage     = "https://github.com/Rogaven/ODX.Core"
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
