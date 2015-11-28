@@ -129,11 +129,11 @@
 - (NSSet *)od_mapObjects:(id (^)(id obj))predicate {
     if (!predicate || self.count == 0) return [self copy];
 
-    NSMutableSet *arr = [NSMutableSet setWithCapacity:self.count];
+    NSMutableSet *set = [NSMutableSet setWithCapacity:self.count];
     [OD_EACH_OBJ(self){
-        [arr addObject:predicate(obj) ?: [NSNull null]];
+        [set addObject:predicate(obj) ?: [NSNull null]];
     }];
-    return [arr copy];
+    return [set copy];
 }
 
 - (id)od_reduceObjects:(id (^)(id, id))predicate {
@@ -146,6 +146,78 @@
     id val = initial;
     for (id obj in self) {
         val = predicate(val, obj);
+    }
+    return val;
+}
+
+@end
+
+@implementation NSDictionary (ODTransformation)
+
+- (BOOL)od_everyObject:(BOOL (^)(id, id))predicate {
+    if (predicate) {
+        for (id key in self.allKeys) {
+            if (!predicate(key, self[key])) {
+                return NO;
+            }
+        }
+    }
+    return YES;
+}
+
+- (BOOL)od_someObject:(BOOL (^)(id, id))predicate {
+    if (predicate) {
+        for (id key in self.allKeys) {
+            if (predicate(key, self[key])) {
+                return YES;
+            }
+        }
+    }
+    return NO;
+}
+
+- (NSArray *)od_filterObjects:(BOOL (^)(id, id, BOOL *))predicate {
+    if (!predicate) return nil;
+    return [self objectsForKeys:[self keysOfEntriesPassingTest:predicate].allObjects notFoundMarker:[NSNull null]];
+}
+
+- (id)od_filterObject:(BOOL (^)(id, id, BOOL *))predicate {
+    if (!predicate) return nil;
+    return [self objectForKey:[self keysOfEntriesPassingTest:predicate].anyObject];
+}
+
+- (NSDictionary *)od_mapObjects:(id (^)(id, id))predicate {
+    if (!predicate) return self;
+
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:self.count];
+    [OD_EACH_KEYOBJ(self){
+        dict[key] = predicate(key, obj) ?: [NSNull null];
+    }];
+    
+    return [dict copy];
+}
+
+- (NSDictionary *)od_mapKeys:(id (^)(id, id))predicate {
+    if (!predicate) return self;
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:self.count];
+    [OD_EACH_KEYOBJ(self){
+        dict[predicate(key, obj) ?: [NSNull null]] = obj;
+    }];
+    
+    return [dict copy];
+}
+
+- (id)od_reduceObjects:(id (^)(id, id, id))predicate {
+    return [self od_reduceObjects:predicate initial:nil];
+}
+
+- (id)od_reduceObjects:(id (^)(id, id, id))predicate initial:(id)initial {
+    if (!predicate) return initial;
+    
+    id val = initial;
+    for (id key in self.allKeys) {
+        val = predicate(val, key, self[key]);
     }
     return val;
 }

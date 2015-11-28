@@ -397,3 +397,110 @@
 }
 
 @end
+
+
+@interface NSDictionaryTransformation_Test : XCTestCase
+@end
+
+@implementation NSDictionaryTransformation_Test
+
+- (void)testEvery {
+    XCTAssert([(@{@0: @0, @1: @1, @2: @2}) od_everyObject:^BOOL(NSNumber *key, NSNumber *obj) {
+        return obj.intValue >= 0;
+    }]);
+    
+    XCTAssert(![(@{@0: @0, @1: @1, @2: @2}) od_everyObject:^BOOL(NSNumber *key, NSNumber *obj) {
+        return obj.intValue > 0;
+    }]);
+    
+    XCTAssert( [(@{@1: @1}) od_everyObject:nil] == YES );
+    XCTAssert( [@{} od_everyObject:^BOOL(id key, id obj) {
+        return YES;
+    }] == YES );
+}
+
+- (void)testSome {
+    XCTAssert([(@{@0: @0, @1: @1, @2: @2}) od_someObject:^BOOL(NSNumber *key, NSNumber *obj) {
+        return obj.intValue > 0;
+    }]);
+    
+    XCTAssert(![(@{@0: @0, @1: @1, @2: @2}) od_someObject:^BOOL(NSNumber *key, NSNumber *obj) {
+        return obj.intValue < 0;
+    }]);
+    
+    XCTAssert( [(@{@1: @1}) od_someObject:nil] == NO );
+    XCTAssert( [@{} od_someObject:^BOOL(id key, id obj) {
+        return YES;
+    }] == NO );
+}
+
+- (void)testFilterObject {
+    XCTAssert([[(@{@0: @0, @1: @1, @2: @2}) od_filterObject:^BOOL(NSNumber *key, NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 1;
+    }] intValue] == 2);
+    
+    XCTAssert([(@{@0: @0, @1: @1, @2: @2}) od_filterObject:^BOOL(NSNumber *key, NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 2;
+    }] == nil);
+    
+    XCTAssert([(@{}) od_filterObject:^BOOL(NSNumber *key, NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 2;
+    }] == nil);
+    
+    XCTAssert([(@{@1: @1}) od_filterObject:nil] == nil);
+}
+
+- (void)testFilterObjects {
+    XCTAssert([[(@{@0: @0, @1: @1, @2: @2}) od_filterObjects:^BOOL(NSNumber *key, NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 1;
+    }] count] == 1);
+    
+    XCTAssert([(@{@0: @0, @1: @1, @2: @2}) od_filterObjects:^BOOL(NSNumber *key, NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 2;
+    }].count == 0);
+    
+    XCTAssert([(@{@1: @1}) od_filterObjects:nil] == nil);
+    XCTAssert([@{} od_filterObjects:^BOOL(NSNumber *key, NSNumber *obj, BOOL *stop) { return YES; }].count == 0);
+}
+
+- (void)testMap {
+    XCTAssert([[(@{@0: @0, @1: @1, @2: @2}) od_mapObjects:^id(id key, id obj) {
+        return [obj stringValue];
+    }] isEqualToDictionary:(@{@0:@"0", @1:@"1", @2:@"2"})]);
+    
+    XCTAssert([[(@{@0:@0, @1:@1, @2:@2}) od_mapObjects:^id(id key, id obj) {
+        return nil;
+    }] isEqualToDictionary:(@{@0:[NSNull null], @1:[NSNull null], @2:[NSNull null]})]);
+    
+    XCTAssert([[(@{@1:@1}) od_mapObjects:nil] isEqualToDictionary:(@{@1:@1})]);
+    XCTAssert([@{} od_mapObjects:^id(id key, id obj) { return @"a"; }].count == 0);
+
+
+    XCTAssert([[(@{@0: @0, @1: @1, @2: @2}) od_mapKeys:^id(id key, id obj) {
+        return [obj stringValue];
+    }] isEqualToDictionary:(@{@"0": @0, @"1":@1, @"2":@2})]);
+    
+    XCTAssert([(@{@0:@0, @1:@1, @2:@2}) od_mapKeys:^id(id key, id obj) {
+        return nil;
+    }].count == 1 );
+    
+    XCTAssert([[(@{@1:@1}) od_mapKeys:nil] isEqualToDictionary:(@{@1:@1})]);
+    XCTAssert([@{} od_mapKeys:^id(id key, id obj) { return @"a"; }].count == 0);
+}
+
+- (void)testReduce {
+    XCTAssert([[(@{@0: @0, @1: @1, @2: @2 }) od_reduceObjects:^id(NSNumber *value, NSNumber *key, NSNumber *obj) {
+        return @( value.integerValue + obj.integerValue );
+    }] integerValue] == 3);
+    
+    XCTAssert([[(@{@0: @0, @1: @1, @2: @2}) od_reduceObjects:^id(NSNumber *value, NSNumber *key, NSNumber *obj) {
+        return @( value.integerValue + obj.integerValue );
+    } initial:@1] integerValue] == 4);
+    
+    XCTAssert([(@{@0: @0, @1: @1}) od_reduceObjects:nil] == nil);
+    XCTAssert([(@{}) od_reduceObjects:^id(NSNumber *key, NSNumber *value, NSNumber *obj) {
+        return @( value.integerValue + obj.integerValue );
+    }] == nil);
+}
+
+@end

@@ -50,3 +50,17 @@
 - (id)od_reduceObjects:(id (^)(id value, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
 - (id)od_reduceObjects:(id (^)(id value, ObjectType obj))predicate initial:(id)initial NS_AVAILABLE(10_6, 4_0);
 @end
+
+@interface NSDictionary<KeyType, ObjectType> (ODTransformation)
+- (BOOL)od_everyObject:(BOOL (^)(KeyType key, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
+- (BOOL)od_someObject:(BOOL (^)(KeyType key, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
+
+- (NSArray<ObjectType> *)od_filterObjects:(BOOL (^)(KeyType key, ObjectType obj, BOOL *stop))predicate NS_AVAILABLE(10_6, 4_0);
+- (ObjectType)od_filterObject:(BOOL (^)(KeyType key, ObjectType obj, BOOL *stop))predicate NS_AVAILABLE(10_6, 4_0);
+
+- (NSDictionary *)od_mapObjects:(id (^)(KeyType key, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
+- (NSDictionary *)od_mapKeys:(id (^)(KeyType key, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
+
+- (id)od_reduceObjects:(id (^)(id value, KeyType key, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
+- (id)od_reduceObjects:(id (^)(id value, KeyType key, ObjectType obj))predicate initial:(id)initial NS_AVAILABLE(10_6, 4_0);
+@end
