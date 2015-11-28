@@ -27,4 +27,5 @@
 #import "ODStringify.h"
 #import "ODWeakify.h"
 #import "NSObject+ODValidation.h"
+#import "NSObject+ODTransformation.h"
 #import "ODPath.h"

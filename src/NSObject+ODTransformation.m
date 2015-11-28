@@ -32,10 +32,10 @@
 - (BOOL)od_everyObject:(BOOL (^)(id, NSUInteger))predicate {
     if (predicate) {
         for (NSUInteger i=0; i<self.count; ++i) {
-            if(!predicate(self[i], i)) {
+            if (!predicate(self[i], i)) {
                 return NO;
             }
-        };
+        }
     }
     return YES;
 }
@@ -43,20 +43,23 @@
 - (BOOL)od_someObject:(BOOL (^)(id, NSUInteger))predicate {
     if (predicate) {
         for (NSUInteger i=0; i<self.count; ++i) {
-            if(predicate(self[i], i)) {
+            if (predicate(self[i], i)) {
                 return YES;
             }
-        };
+        }
     }
     return NO;
 }
 
 - (NSArray *)od_filterObjects:(BOOL (^)(id, NSUInteger, BOOL *))predicate {
+    if (!predicate) return nil;
     return [self objectsAtIndexes:[self indexesOfObjectsPassingTest:predicate]];
 }
 
 - (id)od_filterObject:(BOOL (^)(id, NSUInteger, BOOL *))predicate {
-    return [self objectAtIndex:[self indexOfObjectPassingTest:predicate]];
+    if (!predicate) return nil;
+    NSUInteger idx = [self indexOfObjectPassingTest:predicate];
+    return idx == NSNotFound ? nil : [self objectAtIndex:idx];
 }
 
 - (NSArray *)od_mapObjects:(id (^)(id, NSUInteger))predicate {
@@ -64,9 +67,21 @@
     
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:self.count];
     [OD_EACH_OBJIDX(self){
-        [arr addObject:predicate(obj, idx)];
+        [arr addObject:predicate(obj, idx) ?: [NSNull null]];
     }];
     return [arr copy];
+}
+
+- (id)od_reduceObjects:(id (^)(id, id, NSUInteger))predicate {
+    return [self od_reduceObjects:predicate initial:nil];
+}
+
+- (id)od_reduceObjects:(id (^)(id, id, NSUInteger))predicate initial:(id)initial {
+    id val = initial;
+    for (NSUInteger i=0; i<self.count; ++i) {
+        val = predicate(val, self[i], i);
+    }
+    return val;
 }
 
 - (NSDictionary *)od_dictionaryWithMappedKeys:(id (^)(id, NSUInteger))predicate {

@@ -32,6 +32,9 @@
 
 - (NSArray *)od_mapObjects:(id (^)(ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
 
+- (id)od_reduceObjects:(id (^)(id value, ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
+- (id)od_reduceObjects:(id (^)(id value, ObjectType obj, NSUInteger idx))predicate initial:(id)initial NS_AVAILABLE(10_6, 4_0);
+
 - (NSDictionary *)od_dictionaryWithMappedKeys:(id (^)(ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
 @end
 
