@@ -195,10 +195,10 @@
 
 @end
 
-@interface NSObjectTransformation_Test : XCTestCase
+@interface NSArrayTransformation_Test : XCTestCase
 @end
 
-@implementation NSObjectTransformation_Test
+@implementation NSArrayTransformation_Test
 
 - (void)testEvery {
     XCTAssert([(@[ @0, @1, @2 ]) od_everyObject:^BOOL(NSNumber *obj, NSUInteger idx) {
@@ -280,7 +280,7 @@
         return @( value.integerValue + obj.integerValue );
     } initial:@1] integerValue] == 4);
     
-    XCTAssert([[(@[ @0, @1]) od_reduceObjects:nil] isEqualToArray:(@[@0, @1])]);
+    XCTAssert([(@[ @0, @1]) od_reduceObjects:nil] == nil);
     XCTAssert([(@[]) od_reduceObjects:^id(NSNumber *value, NSNumber *obj, NSUInteger idx) {
         return @( value.integerValue + obj.integerValue );
     }] == nil);
@@ -299,6 +299,101 @@
     XCTAssert([[(@[ @0, @1]) od_dictionaryWithMappedKeys:^id(id obj, NSUInteger idx) {
         return nil;
     }] isEqualToDictionary:(@{ [NSNull null]: @0 })]);
+}
+
+@end
+
+
+@interface NSSetTransformation_Test : XCTestCase
+@end
+
+@implementation NSSetTransformation_Test
+
+- (void)testEvery {    
+    XCTAssert([([NSSet setWithObjects:@0, @1, @2, nil]) od_everyObject:^BOOL(NSNumber *obj) {
+        return obj.intValue >= 0;
+    }]);
+    
+    XCTAssert(![([NSSet setWithObjects: @0, @1, @2, nil]) od_everyObject:^BOOL(NSNumber *obj) {
+        return obj.intValue > 0;
+    }]);
+    
+    XCTAssert( [([NSSet setWithObjects: @1, nil]) od_everyObject:nil] == YES );
+    XCTAssert( [[NSSet set] od_everyObject:^BOOL(id obj) {
+        return YES;
+    }] == YES );
+}
+
+- (void)testSome {
+    XCTAssert([([NSSet setWithObjects: @0, @1, @2, nil]) od_someObject:^BOOL(NSNumber *obj) {
+        return obj.intValue > 0;
+    }]);
+    
+    XCTAssert(![([NSSet setWithObjects: @0, @1, @2, nil]) od_someObject:^BOOL(NSNumber *obj) {
+        return obj.intValue < 0;
+    }]);
+    
+    XCTAssert( [([NSSet setWithObjects: @1, nil]) od_someObject:nil] == NO );
+    XCTAssert( [[NSSet set] od_someObject:^BOOL(id obj) {
+        return YES;
+    }] == NO );
+}
+
+- (void)testFilterObject {
+    XCTAssert([[([NSSet setWithObjects: @0, @1, @2, nil]) od_filterObject:^BOOL(NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 1;
+    }] intValue] == 2);
+    
+    XCTAssert([([NSSet setWithObjects: @0, @1, @2, nil]) od_filterObject:^BOOL(NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 2;
+    }] == nil);
+    
+    XCTAssert([([NSSet set]) od_filterObject:^BOOL(NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 2;
+    }] == nil);
+    
+    XCTAssert([([NSSet setWithObjects:@1, nil]) od_filterObject:nil] == nil);
+}
+
+- (void)testFilterObjects {
+    XCTAssert([[([NSSet setWithObjects: @0, @1, @2, nil]) od_filterObjects:^BOOL(NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 1;
+    }] count] == 1);
+    
+    XCTAssert([([NSSet setWithObjects: @0, @1, @2, nil ]) od_filterObjects:^BOOL(NSNumber *obj, BOOL *stop) {
+        return obj.intValue > 2;
+    }].count == 0);
+    
+    XCTAssert([([NSSet setWithObjects:@1, nil]) od_filterObjects:nil] == nil);
+    XCTAssert([[NSSet set] od_filterObjects:^BOOL(NSNumber *obj, BOOL *stop) { return YES; }].count == 0);
+}
+
+- (void)testMap {
+    XCTAssert([[([NSSet setWithObjects: @0, @1, @2, nil ]) od_mapObjects:^id(id obj) {
+        return [obj stringValue];
+    }] isEqualToSet:([NSSet setWithObjects: @"0", @"1", @"2", nil])]);
+    
+    XCTAssert([[([NSSet setWithObjects: @0, @1, @2, nil]) od_mapObjects:^id(id obj) {
+        return nil;
+    }] isEqualToSet:([NSSet setWithObjects: [NSNull null], [NSNull null], [NSNull null], nil])]);
+    
+    XCTAssert([[([NSSet setWithObjects:@1, nil]) od_mapObjects:nil] isEqualToSet:([NSSet setWithObjects: @1, nil])]);
+    XCTAssert([[NSSet set] od_mapObjects:^id(id obj) { return @"a"; }].count == 0);
+}
+
+- (void)testReduce {
+    XCTAssert([[([NSSet setWithObjects: @0, @1, @2 , nil]) od_reduceObjects:^id(NSNumber *value, NSNumber *obj) {
+        return @( value.integerValue + obj.integerValue );
+    }] integerValue] == 3);
+    
+    XCTAssert([[([NSSet setWithObjects: @0, @1, @2, nil ]) od_reduceObjects:^id(NSNumber *value, NSNumber *obj) {
+        return @( value.integerValue + obj.integerValue );
+    } initial:@1] integerValue] == 4);
+    
+    XCTAssert([([NSSet setWithObjects: @0, @1, nil]) od_reduceObjects:nil] == nil);
+    XCTAssert([([NSSet set]) od_reduceObjects:^id(NSNumber *value, NSNumber *obj) {
+        return @( value.integerValue + obj.integerValue );
+    }] == nil);
 }
 
 @end

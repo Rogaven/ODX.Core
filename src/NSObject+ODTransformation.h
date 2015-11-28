@@ -32,10 +32,21 @@
 
 - (NSArray *)od_mapObjects:(id (^)(ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
 
-- (id)od_reduceObjects:(id (^)(id value, ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
-- (id)od_reduceObjects:(id (^)(id value, ObjectType obj, NSUInteger idx))predicate initial:(id)initial NS_AVAILABLE(10_6, 4_0);
+- (id)od_reduceObjects:(ObjectType (^)(ObjectType value, ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
+- (id)od_reduceObjects:(ObjectType (^)(ObjectType value, ObjectType obj, NSUInteger idx))predicate initial:(ObjectType)initial NS_AVAILABLE(10_6, 4_0);
 
 - (NSDictionary *)od_dictionaryWithMappedKeys:(id (^)(ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
 @end
 
+@interface NSSet<ObjectType> (ODTransformation)
+- (BOOL)od_everyObject:(BOOL (^)(ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
+- (BOOL)od_someObject:(BOOL (^)(ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
 
+- (NSArray<ObjectType> *)od_filterObjects:(BOOL (^)(ObjectType obj, BOOL *stop))predicate NS_AVAILABLE(10_6, 4_0);
+- (ObjectType)od_filterObject:(BOOL (^)(ObjectType obj, BOOL *stop))predicate NS_AVAILABLE(10_6, 4_0);
+
+- (NSSet *)od_mapObjects:(id (^)(ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
+
+- (id)od_reduceObjects:(id (^)(id value, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
+- (id)od_reduceObjects:(id (^)(id value, ObjectType obj))predicate initial:(id)initial NS_AVAILABLE(10_6, 4_0);
+@end

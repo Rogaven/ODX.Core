@@ -77,6 +77,8 @@
 }
 
 - (id)od_reduceObjects:(id (^)(id, id, NSUInteger))predicate initial:(id)initial {
+    if (!predicate) return initial;
+    
     id val = initial;
     for (NSUInteger i=0; i<self.count; ++i) {
         val = predicate(val, self[i], i);
@@ -86,6 +88,66 @@
 
 - (NSDictionary *)od_dictionaryWithMappedKeys:(id (^)(id, NSUInteger))predicate {
     return [NSDictionary dictionaryWithObjects:self forKeys:[self od_mapObjects:predicate]];
+}
+
+@end
+
+@implementation NSSet (ODTransformation)
+
+- (BOOL)od_everyObject:(BOOL (^)(id))predicate {
+    if (predicate) {
+        for (id obj in self) {
+            if (!predicate(obj)) {
+                return NO;
+            }
+        }
+    }
+    return YES;
+}
+
+- (BOOL)od_someObject:(BOOL (^)(id))predicate {
+    if (predicate) {
+        for (id obj in self) {
+            if (predicate(obj)) {
+                return YES;
+            }
+        }
+    }
+    return NO;
+}
+
+- (NSArray *)od_filterObjects:(BOOL (^)(id, BOOL *))predicate {
+    if (!predicate) return nil;
+    return [self objectsPassingTest:predicate].allObjects;
+}
+
+- (id)od_filterObject:(BOOL (^)(id, BOOL *))predicate {
+    if (!predicate) return nil;
+    return [self objectsPassingTest:predicate].anyObject;
+}
+
+- (NSSet *)od_mapObjects:(id (^)(id obj))predicate {
+    if (!predicate || self.count == 0) return [self copy];
+
+    NSMutableSet *arr = [NSMutableSet setWithCapacity:self.count];
+    [OD_EACH_OBJ(self){
+        [arr addObject:predicate(obj) ?: [NSNull null]];
+    }];
+    return [arr copy];
+}
+
+- (id)od_reduceObjects:(id (^)(id, id))predicate {
+    return [self od_reduceObjects:predicate initial:nil];
+}
+
+- (id)od_reduceObjects:(id (^)(id, id))predicate initial:(id)initial {
+    if (!predicate) return initial;
+    
+    id val = initial;
+    for (id obj in self) {
+        val = predicate(val, obj);
+    }
+    return val;
 }
 
 @end
