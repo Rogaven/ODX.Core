@@ -64,3 +64,9 @@
 - (id)od_reduceObjects:(id (^)(id value, KeyType key, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
 - (id)od_reduceObjects:(id (^)(id value, KeyType key, ObjectType obj))predicate initial:(id)initial NS_AVAILABLE(10_6, 4_0);
 @end
+
+NS_INLINE NSComparator ODComparatorWithBlock(BOOL (^less)(id a, id b)) {
+    return ^(id a, id b) {
+        return less(a, b) ? NSOrderedAscending : (less(b, a) ? NSOrderedDescending : NSOrderedSame);
+    };
+}
