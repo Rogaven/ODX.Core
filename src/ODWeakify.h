@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 /** Weakify & Strongify */
-#define od_weakify(obj)     __weak typeof(obj) self_weak_ = obj;
+#define od_weakify(obj)     __weak __typeof(obj) self_weak_ = obj;
 #define od_strongify(obj)   _Pragma("clang diagnostic push")                    \
                             _Pragma("clang diagnostic ignored \"-Wshadow\"")    \
                             __strong typeof(obj) obj = self_weak_;              \
