@@ -1,5 +1,5 @@
 //
-//  NSObject+Validation.h
+//  NSString+ODUtils.h
 //
 // Copyright (c) 2009-2015 Alexey Nazaroff, AJR
 //
@@ -23,37 +23,36 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (ODXCore_Validation)
+@interface NSString (ODXCore_Hash)
+- (NSString *)od_md5;
+@end
 
-/** Returns YES if object isn't an instance of NSNull class */
-- (BOOL)od_isValidObject;
+@interface NSString (ODXCore_Substrings)
+- (BOOL)od_hasSubstring:(NSString *)substring;
+- (NSString *)od_firstLetter;
+- (NSString *)od_firstLetterCapitalizedString;
+@end
 
-/** Returns YES if object is an instance of NSString class and string is nonempty */
-- (BOOL)od_isValidString;
+@interface NSString (ODXCore_Email)
+- (BOOL)od_isEmailAddress;
+@end
 
-/** Returns YES if object is an instance of NSDictionary class */
-- (BOOL)od_isValidDictionary;
+@interface NSString (ODXCore_Random)
++ (NSString *)od_randomString;
+@end
 
-/** Returns YES if object is an instance of NSArray class and array is nonempty */
-- (BOOL)od_isValidArray;
+@interface NSString (ODXCore_Generate)
+- (NSString *)od_repeatTimes:(NSUInteger)times;
+@end
 
-/** Returns YES if object is an instance of NSNumber class */
-- (BOOL)od_isValidNumber;
+@interface NSString (ODXCore_Hex)
+- (unsigned int)od_hexInteger;
+@end
 
+@interface NSString (ODXCore_Escapes)
+- (NSString *)od_stringByReplacingSQLEscapes;
+@end
 
-/** Returns object if it isn't NSNull, otherwise nil */
-- (instancetype)od_validObject;
-
-/** Returns string value for NSStrings and NSNumbers, otherwise nil */
-- (NSString *)od_validString;
-
-/** Returns number value for NSStrings and NSNumbers, otherwise nil */
-- (NSNumber *)od_validNumber;
-
-/** Returns objects if it's instance of NSArray, otherwise nil */
-- (NSArray *)od_validArray;
-
-/** Returns objects if it's instance of NSDictionary, otherwise nil */
-- (NSDictionary *)od_validDictionary;
-
+@interface NSString (ODXCore_Chars)
+- (BOOL)od_hasNonAlphabetSymbols;
 @end

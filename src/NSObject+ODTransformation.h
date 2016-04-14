@@ -23,7 +23,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray<ObjectType> (ODTransformation)
+@interface NSArray<ObjectType> (ODXCore_Transformation)
 - (BOOL)od_everyObject:(BOOL (^)(ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
 - (BOOL)od_someObject:(BOOL (^)(ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
 
@@ -38,7 +38,7 @@
 - (NSDictionary *)od_dictionaryWithMappedKeys:(id (^)(ObjectType obj, NSUInteger idx))predicate NS_AVAILABLE(10_6, 4_0);
 @end
 
-@interface NSSet<ObjectType> (ODTransformation)
+@interface NSSet<ObjectType> (ODXCore_Transformation)
 - (BOOL)od_everyObject:(BOOL (^)(ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
 - (BOOL)od_someObject:(BOOL (^)(ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
 
@@ -51,7 +51,7 @@
 - (id)od_reduceObjects:(id (^)(id value, ObjectType obj))predicate initial:(id)initial NS_AVAILABLE(10_6, 4_0);
 @end
 
-@interface NSDictionary<KeyType, ObjectType> (ODTransformation)
+@interface NSDictionary<KeyType, ObjectType> (ODXCore_Transformation)
 - (BOOL)od_everyObject:(BOOL (^)(KeyType key, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
 - (BOOL)od_someObject:(BOOL (^)(KeyType key, ObjectType obj))predicate NS_AVAILABLE(10_6, 4_0);
 

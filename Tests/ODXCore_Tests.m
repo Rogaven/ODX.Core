@@ -125,11 +125,11 @@
 
 @end
 
-@interface NSObject (ODPropTest)
+@interface NSObject (ODXCore_PropTest)
 @property (nonatomic, strong) NSString *od_str;
 @end
 
-@implementation NSObject (ODPropTest)
+@implementation NSObject (ODXCore_PropTest)
 @synthesizing_associatedRetainProperty(NSString *, od_str, setOd_str)
 @end
 

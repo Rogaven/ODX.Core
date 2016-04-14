@@ -27,7 +27,7 @@
 #define OD_EACH_OBJIDX(arr) arr enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
 #define OD_EACH_KEYOBJ(arr) arr enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop)
 
-@implementation NSArray (ODTransformation)
+@implementation NSArray (ODXCore_Transformation)
 
 - (BOOL)od_everyObject:(BOOL (^)(id, NSUInteger))predicate {
     if (predicate) {
@@ -92,7 +92,7 @@
 
 @end
 
-@implementation NSSet (ODTransformation)
+@implementation NSSet (ODXCore_Transformation)
 
 - (BOOL)od_everyObject:(BOOL (^)(id))predicate {
     if (predicate) {
@@ -152,7 +152,7 @@
 
 @end
 
-@implementation NSDictionary (ODTransformation)
+@implementation NSDictionary (ODXCore_Transformation)
 
 - (BOOL)od_everyObject:(BOOL (^)(id, id))predicate {
     if (predicate) {

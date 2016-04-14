@@ -23,7 +23,7 @@
 
 #import "NSObject+ODValidation.h"
 
-@implementation NSObject (OD_Validation)
+@implementation NSObject (ODXCore_Validation)
 
 - (BOOL)od_isValidObject {
     return YES;
@@ -69,7 +69,7 @@
 @end
 
 
-@implementation NSNull (OD_Validation)
+@implementation NSNull (ODXCore_Validation)
 
 - (BOOL)od_isValidObject {
     return NO;
@@ -82,7 +82,7 @@
 @end
 
 
-@implementation NSNumber (OD_Validation)
+@implementation NSNumber (ODXCore_Validation)
 
 - (BOOL)od_isValidNumber {
     return YES;
@@ -99,7 +99,7 @@
 @end
 
 
-@implementation NSString (OD_Validation)
+@implementation NSString (ODXCore_Validation)
 
 - (BOOL)od_isValidString {
     return self.length > 0;
@@ -116,7 +116,7 @@
 @end
 
 
-@implementation NSDictionary (OD_Validation)
+@implementation NSDictionary (ODXCore_Validation)
 
 - (BOOL)od_isValidDictionary {
     return YES;
@@ -129,7 +129,7 @@
 @end
 
 
-@implementation NSArray (OD_Validation)
+@implementation NSArray (ODXCore_Validation)
 
 - (BOOL)od_isValidArray {
     return self.count > 0;
