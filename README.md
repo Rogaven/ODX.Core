@@ -6,18 +6,18 @@
 
 ODX.Core is a set of utility classes and methods for iOS & OSX apps.
 Now it's just bundle, which included:
-    * ODBlocks
-    * ODCompatibility
-    * ODDispatch
-    * ODLog
-    * ODPath
-    * ODProperties
-    * ODRuntime
-    * ODSerialization
-    * ODStringify
-    * ODTransformation
-    * ODValidation
-    * ODWeakify
+ * [ODBlocks](https://github.com/Rogaven/ODBlocks)
+ * [ODCompatibility](https://github.com/Rogaven/ODCompatibility)
+ * [ODDispatch](https://github.com/Rogaven/ODDispatch)
+ * [ODLog](https://github.com/Rogaven/ODLog)
+ * [ODPath](https://github.com/Rogaven/ODPath)
+ * [ODProperties](https://github.com/Rogaven/ODProperties)
+ * [ODRuntime](https://github.com/Rogaven/ODRuntime)
+ * [ODSerialization](https://github.com/Rogaven/ODSerialization)
+ * [ODStringify](https://github.com/Rogaven/ODStringify)
+ * [ODTransformation](https://github.com/Rogaven/ODTransformation)
+ * [ODValidation](https://github.com/Rogaven/ODValidation)
+ * [ODWeakify](https://github.com/Rogaven/ODWeakify)
 
 ## Usage
 
