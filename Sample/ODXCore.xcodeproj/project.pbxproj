@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		238DC60BD87310137E9AB045 /* libPods-ODXCoreTests_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53BDFDBF1C3837C143196200 /* libPods-ODXCoreTests_iOS.a */; };
+		90A4472AA0F8E51935CD0078 /* libPods-ODXCoreTests_macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 087EB929371EBAAA0C0568AB /* libPods-ODXCoreTests_macOS.a */; };
+		FAD11DA11D11CCEE008DD885 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FAD11DA01D11CCEE008DD885 /* Podfile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		087EB929371EBAAA0C0568AB /* libPods-ODXCoreTests_macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ODXCoreTests_macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B02065538EBEDC072582251 /* Pods-ODXCoreTests_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ODXCoreTests_macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ODXCoreTests_macOS/Pods-ODXCoreTests_macOS.release.xcconfig"; sourceTree = "<group>"; };
+		22633BF31351E513A9B9A694 /* Pods-ODXCoreTests_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ODXCoreTests_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ODXCoreTests_iOS/Pods-ODXCoreTests_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		53BDFDBF1C3837C143196200 /* libPods-ODXCoreTests_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ODXCoreTests_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB1D4ADF7EA37CFBEC72844 /* Pods-ODXCoreTests_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ODXCoreTests_macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ODXCoreTests_macOS/Pods-ODXCoreTests_macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B1D7DF89C31AD53883AE6000 /* Pods-ODXCoreTests_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ODXCoreTests_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ODXCoreTests_iOS/Pods-ODXCoreTests_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FA16A6421C05E96400394311 /* ODXCoreTests_macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ODXCoreTests_macOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2C30321C007E3300BD3CE5 /* ODXCoreTests_iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ODXCoreTests_iOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2C30411C0080F000BD3CE5 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = SOURCE_ROOT; };
+		FA2C30421C0080F000BD3CE5 /* ODX.Core.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ODX.Core.podspec; path = ../ODX.Core.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FA2C30431C0080F000BD3CE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
+		FAD11DA01D11CCEE008DD885 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA16A63A1C05E96400394311 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90A4472AA0F8E51935CD0078 /* libPods-ODXCoreTests_macOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA2C302F1C007E3300BD3CE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238DC60BD87310137E9AB045 /* libPods-ODXCoreTests_iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F3A167B7468BED64D2E71EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53BDFDBF1C3837C143196200 /* libPods-ODXCoreTests_iOS.a */,
+				087EB929371EBAAA0C0568AB /* libPods-ODXCoreTests_macOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C658DE47EC1735BECC597ED3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1D7DF89C31AD53883AE6000 /* Pods-ODXCoreTests_iOS.debug.xcconfig */,
+				22633BF31351E513A9B9A694 /* Pods-ODXCoreTests_iOS.release.xcconfig */,
+				7EB1D4ADF7EA37CFBEC72844 /* Pods-ODXCoreTests_macOS.debug.xcconfig */,
+				1B02065538EBEDC072582251 /* Pods-ODXCoreTests_macOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA2C30191C007E1300BD3CE5 = {
+			isa = PBXGroup;
+			children = (
+				FAD11DA01D11CCEE008DD885 /* Podfile */,
+				FA2C30411C0080F000BD3CE5 /* LICENSE.txt */,
+				FA2C30421C0080F000BD3CE5 /* ODX.Core.podspec */,
+				FA2C30431C0080F000BD3CE5 /* README.md */,
+				FA2C30231C007E1300BD3CE5 /* Products */,
+				C658DE47EC1735BECC597ED3 /* Pods */,
+				6F3A167B7468BED64D2E71EA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA2C30231C007E1300BD3CE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C30321C007E3300BD3CE5 /* ODXCoreTests_iOS.xctest */,
+				FA16A6421C05E96400394311 /* ODXCoreTests_macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA16A6311C05E96400394311 /* ODXCoreTests_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA16A63F1C05E96400394311 /* Build configuration list for PBXNativeTarget "ODXCoreTests_macOS" */;
+			buildPhases = (
+				C4240B1D7438676F3670342E /* [CP] Check Pods Manifest.lock */,
+				FA16A6341C05E96400394311 /* Sources */,
+				FA16A63A1C05E96400394311 /* Frameworks */,
+				FA16A63C1C05E96400394311 /* Resources */,
+				3DDB1BA8AF029A884A3CCFE6 /* [CP] Embed Pods Frameworks */,
+				2E351162E45156C26AA958A3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ODXCoreTests_macOS;
+			productName = Tests;
+			productReference = FA16A6421C05E96400394311 /* ODXCoreTests_macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA2C30311C007E3300BD3CE5 /* ODXCoreTests_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA2C303A1C007E3300BD3CE5 /* Build configuration list for PBXNativeTarget "ODXCoreTests_iOS" */;
+			buildPhases = (
+				1B97B64E9864A402B2FA3EDC /* [CP] Check Pods Manifest.lock */,
+				FA2C302E1C007E3300BD3CE5 /* Sources */,
+				FA2C302F1C007E3300BD3CE5 /* Frameworks */,
+				FA2C30301C007E3300BD3CE5 /* Resources */,
+				5D03184D3277A14BD99B04C0 /* [CP] Embed Pods Frameworks */,
+				24F068E2EE995638976B3A7D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ODXCoreTests_iOS;
+			productName = Tests;
+			productReference = FA2C30321C007E3300BD3CE5 /* ODXCoreTests_iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA2C301A1C007E1300BD3CE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = AJR;
+				TargetAttributes = {
+					FA2C30311C007E3300BD3CE5 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = FA2C301D1C007E1300BD3CE5 /* Build configuration list for PBXProject "ODXCore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FA2C30191C007E1300BD3CE5;
+			productRefGroup = FA2C30231C007E1300BD3CE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA2C30311C007E3300BD3CE5 /* ODXCoreTests_iOS */,
+				FA16A6311C05E96400394311 /* ODXCoreTests_macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA16A63C1C05E96400394311 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA2C30301C007E3300BD3CE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD11DA11D11CCEE008DD885 /* Podfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B97B64E9864A402B2FA3EDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		24F068E2EE995638976B3A7D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ODXCoreTests_iOS/Pods-ODXCoreTests_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E351162E45156C26AA958A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ODXCoreTests_macOS/Pods-ODXCoreTests_macOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DDB1BA8AF029A884A3CCFE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ODXCoreTests_macOS/Pods-ODXCoreTests_macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D03184D3277A14BD99B04C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ODXCoreTests_iOS/Pods-ODXCoreTests_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4240B1D7438676F3670342E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA16A6341C05E96400394311 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA2C302E1C007E3300BD3CE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA16A6401C05E96400394311 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB1D4ADF7EA37CFBEC72844 /* Pods-ODXCoreTests_macOS.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nazaroff.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FA16A6411C05E96400394311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B02065538EBEDC072582251 /* Pods-ODXCoreTests_macOS.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nazaroff.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FA2C30291C007E1300BD3CE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA2C302A1C007E1300BD3CE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA2C303B1C007E3300BD3CE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D7DF89C31AD53883AE6000 /* Pods-ODXCoreTests_iOS.debug.xcconfig */;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nazaroff.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FA2C303C1C007E3300BD3CE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22633BF31351E513A9B9A694 /* Pods-ODXCoreTests_iOS.release.xcconfig */;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nazaroff.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA16A63F1C05E96400394311 /* Build configuration list for PBXNativeTarget "ODXCoreTests_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA16A6401C05E96400394311 /* Debug */,
+				FA16A6411C05E96400394311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA2C301D1C007E1300BD3CE5 /* Build configuration list for PBXProject "ODXCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA2C30291C007E1300BD3CE5 /* Debug */,
+				FA2C302A1C007E1300BD3CE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA2C303A1C007E3300BD3CE5 /* Build configuration list for PBXNativeTarget "ODXCoreTests_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA2C303B1C007E3300BD3CE5 /* Debug */,
+				FA2C303C1C007E3300BD3CE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA2C301A1C007E1300BD3CE5 /* Project object */;
+}

@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "ODAssociatedProperty.h"
-#import "ODCompatibility.h"
 #import "ODDispatch.h"
 #import "ODLog.h"
 #import "ODStringify.h"
@@ -29,4 +28,3 @@
 #import "NSObject+ODValidation.h"
 #import "NSObject+ODTransformation.h"
 #import "ODPath.h"
-#import "NSString+ODUtils.h"

@@ -1,0 +1,17 @@
+workspace 'ODXCore'
+project 'ODXCore'
+
+platform :osx, '10.5'
+platform :ios, '7.0'
+
+def odx_core_pod
+    pod 'ODX.Core', :path => ".."    
+end
+
+target 'ODXCoreTests_iOS' do
+    odx_core_pod
+end
+
+target 'ODXCoreTests_macOS' do    
+    odx_core_pod
+end
